@@ -1,111 +1,121 @@
 # 2D Flight Simulator Game
 
-Welcome to the **2D Flight Simulator Game**! This project simulates an arcade-style flight experience where the player pilots a plane, starting from the ground and taking off into the skies. The game is designed in Python using the **Pygame library**, with rich graphics sourced from the [War on Water GFX](https://opengameart.org/content/war-on-water-gfx).
+Welcome to the **2D Flight Simulator Game**! In this game, you pilot a plane, navigate the skies, and simulate real-world physics. Key features include smooth controls, HUD updates, and correct speed mechanics resembling the **B-2 Spirit Bomber** with a maximum speed of **628 mph**.
 
 ---
 
-## Game Features
+## Features
 
-### Core Features:
-- **Takeoff Mechanics**: The plane starts on the ground and requires sufficient speed to take off.
-- **Realistic Movement**: Includes horizontal thrust, vertical lift, drag, and gravity to make the flight more immersive.
-- **Maximum Speed Limit**: Simulated based on the B-2 Bomber with a top speed of ~628 mph.
-- **Heads-Up Display (HUD)**: Displays real-time data including the plane's current speed, altitude, and distance traveled.
-- **Infinite Scrolling Background**: Creates the illusion of an open sky.
+### 1. Dynamic Plane Physics
+- **Throttle Control**: Adjust speed dynamically by increasing or decreasing throttle.
+- **Landing Gear Mechanics**: Deploy and retract landing gear as needed during the flight.
+- **Altitude and Movement**:
+   - Use arrow keys to ascend and descend.
+   - Accelerate and decelerate horizontally with realistic drag effects.
+- **Maximum Speed Limit**: Aircraft tops out at **628 mph** (in game units).
 
-### Game Dynamics:
-1. **Ground Movement**: Use the `Right Arrow` key to accelerate. The plane requires at least 4 units of speed to lift off.
-2. **Takeoff**: Press the `Up Arrow` key at sufficient speed to begin flight.
-3. **Flight Control**:
-   - `Right Arrow`: Increase speed.
-   - `Left Arrow`: Decrease speed.
-   - `Up Arrow`: Tilt up (ascend).
-   - `Down Arrow`: Tilt down (descend).
+### 2. Heads-Up Display (HUD)
+- Displays real-time data:
+  - **Speed**: Horizontal movement speed.
+  - **Altitude**: Distance above ground level.
+  - **Throttle Percentage**: Fuel thrust output.
+  - **Landing Gear Status**: Shows whether landing gear is deployed or retracted.
 
----
-
-## Gameplay Instructions
-
-### Starting the Game:
-1. Download and install [Python](https://www.python.org/).
-2. Install Pygame:
-   ```bash
-   pip install pygame
-   ```
-3. Run `main.py`:
-   ```bash
-   python main.py
-   ```
-
-### Objective:
-- Keep the plane airborne while navigating through the skies. Practice takeoffs and manage your speed, altitude, and movement.
+### 3. Visual and Background Scrolling
+- Infinite background tiling for horizontal and vertical scrolling.
+- Seamless plane movement across a visually rich background.
 
 ---
 
 ## Controls
 
-| Key          | Action                     |
-|--------------|----------------------------|
-| **Right**    | Increase thrust/speed      |
-| **Left**     | Reduce thrust/speed        |
-| **Up**       | Tilt upward                |
-| **Down**     | Tilt downward              |
+| Key          | Action                              |
+|--------------|-------------------------------------|
+| **Up Arrow** | Ascend / Increase Altitude          |
+| **Down Arrow** | Descend / Decrease Altitude        |
+| **Right Arrow** | Accelerate (Increase speed)       |
+| **Left Arrow** | Decelerate (Reduce speed)          |
+| **L**         | Toggle landing gear (Deployed/Retracted) |
+| **Page Up**   | Increase throttle (boost thrust)   |
+| **Page Down** | Decrease throttle                  |
 
 ---
 
-## Assets and Attribution
+## Installation
 
-Graphics for this game were sourced from the [War on Water GFX](https://opengameart.org/content/war-on-water-gfx). It includes plane sprites and environmental graphics.
+### Prerequisites
+1. [Python 3.x](https://www.python.org/) must be installed.
+2. Install `pygame` library:
+   ```bash
+   pip install pygame
+   ```
+
+---
+
+## How to Run
+
+1. Clone or download the repository.
+2. Ensure the following files are in the **assets/** folder:
+   - `plane.png`: The plane image.
+   - `background.png`: The background image.
+3. Run the game:
+   ```bash
+   python main.py
+   ```
+
+---
+
+## Gameplay
+
+1. Start the game, and the plane is idle on the runway (at the bottom of the screen).
+2. Use **Page Up/Down** to control throttle.
+3. Move the plane:
+   - Use **Right/Left Arrow** to increase/decrease horizontal speed.
+   - Use **Up/Down Arrow** to ascend/descend.
+4. Toggle **Landing Gear**:
+   - Press **L** to deploy or retract the landing gear.
+   - HUD dynamically updates the landing gear status.
 
 ---
 
 ## File Overview
 
-### Game Structure
-
-```plaintext
+```
 flight_simulator/
-├── main.py          # Main script for the game logic
-├── README.md        # Game documentation
-├── assets/          # Game assets (images, sounds)
-│   ├── plane.png    # Plane sprite for the player
-│   ├── cloud.png    # Cloud obstacles
-│   └── background.png # Sky background image
+├── main.py            # Main game logic
+├── README.md          # Documentation
+└── assets/            # Game assets
+    ├── plane.png      # Plane sprite
+    ├── background.png # Background image
 ```
 
 ---
 
-## How to Modify
+## Troubleshooting
 
-### Customize Graphics:
-Replace or add new sprites for the plane or environment by modifying files in the `assets/` directory.
+1. **Assets Not Found**:
+   Ensure you’ve placed `plane.png` and `background.png` in the `assets/` folder.
+   
+2. **Pygame Not Installed**:
+   Install `pygame` with:
+   ```bash
+   pip install pygame
+   ```
 
-### Tune Physics:
-Adjust constants in `main.py`:
-- `thrust`: Affects speed gain.
-- `drag`: Manages air resistance.
-- `lift`: Controls how much upward momentum is applied when ascending.
-- `gravity`: Sets the pull downward.
-
-### Maximum Speed:
-Update `MAX_SPEED` in `main.py` to change the plane's top speed.
+3. **Screen Freezes or Stutters**:
+   - Reduce frame rendering logic.
+   - Check system performance.
 
 ---
 
-## Screenshots
+## Credits
 
-Placeholder for in-game screenshots.
-![alt text](image-1.png)
-![alt text](image-2.png)
-
-*(Image credit: War on Water GFX)*
+- **Plane Sprite and Background**: Please ensure `plane.png` and `background.png` are royalty-free images or have proper attribution.
+- Game developed using **Pygame**.
 
 ---
 
 ## License
 
-This game is licensed under the [MIT License](https://opensource.org/licenses/MIT). The assets are used under the terms listed on the [OpenGameArt.org](https://opengameart.org/) website.
-
-
-[def]: image.png
+This project is licensed under the **MIT License**. You’re free to use, modify, and distribute this project with proper attribution.
 
