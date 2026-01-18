@@ -97,7 +97,6 @@ Update `MAX_SPEED` in `main.py` to change the plane's top speed.
 Placeholder for in-game screenshots.
 ![alt text](image-1.png)
 ![alt text](image-2.png)
-![Screenshot of the game](https://opengameart.org/sites/default/files/styles/medium/public/War_on_Water.png)
 
 *(Image credit: War on Water GFX)*
 
@@ -109,3 +108,4 @@ This game is licensed under the [MIT License](https://opensource.org/licenses/MI
 
 
 [def]: image.png
+
